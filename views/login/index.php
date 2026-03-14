@@ -43,7 +43,7 @@
 
             <h2 class="text-center text-gray-400 text-sm mb-8">Ingresa tus credenciales para acceder</h2>
             <!-- Formulario -->
-            <form action="?controller=login&action=login" method="POST" class="space-y-6">
+            <form action="?controller=login&action=login" method="POST" class="space-y-6" novalidate>
                 <div>
                     <label class="block text-xs font-medium text-gray-400 mb-2 uppercase tracking-wide">Usuario / Correo</label>
                     <div class="relative">
@@ -88,6 +88,7 @@
         
         <p class="text-center text-gray-600 text-xs mt-8">&copy; 2026 IPS Alma Vida. Todos los derechos reservados.</p>
     </div>
+    
     <!-- Mensaje de error -->
     <?php if(isset($_GET['error']) && $_GET['error'] == 1): ?>
     <script>
@@ -101,6 +102,8 @@
         });
     </script>
     <?php endif; ?>
+    <!-- Llama a los scripts de la aplicación -->
+    <script src="assets/js/app.js?v=<?php echo time(); ?>"></script>
 
 </body>
 </html>
